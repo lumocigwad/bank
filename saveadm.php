@@ -1,5 +1,5 @@
 <?php
-   
+ 
 // initializing variables
 $fname="";
 $lname="";
@@ -91,12 +91,11 @@ exit();
   
     $sql= "INSERT INTO customer_details(First_Name,Last_Name,Account_Number,Gender,Username,Email,Password) 
           VALUES('$fname', '$lname', '$accountno','$gender', '$username', '$email','$password')";
-          $sql2="INSERT INTO customer(Institution,Account,Account_No,Username,Amount) VALUES('default','default','$accountno','$username','1234')";
+          $sql2="INSERT INTO customer(Account,Account_No,Username,Amount) VALUES('default','$accountno','$username','0')";
             if (mysqli_query($db, $sql) && mysqli_query($db,$sql2))
       {  
-        echo"<script>alert('Customer added successfully')</script>";  
 
-        echo"<script>window.open('admin.php','_self')</script>";  
+        echo"<script>alert('User added successfully')</script>";  
     }  
   
 

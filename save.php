@@ -1,5 +1,5 @@
 <?php
-   
+ 
 // initializing variables
 $fname="";
 $lname="";
@@ -94,6 +94,7 @@ exit();
           $sql2="INSERT INTO customer(Account,Account_No,Username,Amount) VALUES('default','$accountno','$username','0')";
             if (mysqli_query($db, $sql) && mysqli_query($db,$sql2))
       {  
+
         echo"<script>window.open('customerlog.php','_self')</script>";  
     }  
   

@@ -24,13 +24,15 @@ $username=$_SESSION['username'];
 
 
 
-$sql = "SELECT Amount FROM customer WHERE username='$username'";
+$sql = "SELECT Amount, Account_No FROM customer WHERE username='$username'";
 $result = mysqli_query($db,$sql);
 $row = mysqli_fetch_array($result);
 $balance=$row['Amount'];
-$_SESSION['balance'] = $balance;
+$accountno1=$row['Account_No'];
 $deposit=$deposit+$balance;
 
+if ($accountno1==$accountno) {
+  # code...
 
 $sql2="UPDATE customer SET Account='$account',Account_No='$accountno',Amount='$deposit' WHERE Account_No='$accountno' && Username='$username'";
   
@@ -40,8 +42,8 @@ $sql2="UPDATE customer SET Account='$account',Account_No='$accountno',Amount='$d
     }  
   
 
-    else{
-      echo"<script>alert('Enter your account number correctly')</script>";
+    }else{
+      echo"<script>alert('Invalid Account number')</script>";
       echo"<script>window.open('customerwelcome.php','_self')</script>";  
 
 }}

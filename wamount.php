@@ -18,20 +18,24 @@ if (isset($_POST['btn_with'])) {
   $account = mysqli_real_escape_string($db, $_POST['account']);
   $accountno = mysqli_real_escape_string($db, $_POST['accountno']);
   //$username = mysqli_real_escape_string($db, $_POST['username']);
-  $withdraw = mysqli_real_escape_string($db, $_POST['withdraw']);
+  $withdraw1 = mysqli_real_escape_string($db, $_POST['withdraw']);
 
 $username=$_SESSION['username'];
 
 
 
-$sql = "SELECT Amount FROM customer WHERE username='$username'";
+$sql = "SELECT Amount, Account_No FROM customer WHERE username='$username'";
 $result = mysqli_query($db,$sql);
 $row = mysqli_fetch_array($result);
+$accountno1=$row['Account_No'];
 $balance=$row['Amount'];
-$_SESSION['balance'] = $balance;
-$withdraw=$balance-$withdraw;
+$withdraw=$balance-$withdraw1;
 
+if($withdraw1>$balance){
+   echo"<script>alert('you are not allowed to withdraw your balance is')</script>";
+}else{
 
+if ($accountno1==$accountno) {
 $sql2="UPDATE customer SET Account='$account',Account_No='$accountno',Amount='$withdraw' WHERE Account_No='$accountno' && Username='$username'";
   
       if(mysqli_query($db, $sql2))
@@ -40,9 +44,9 @@ $sql2="UPDATE customer SET Account='$account',Account_No='$accountno',Amount='$w
     }  
   
 
-    else{
-      echo"<script>alert('Enter your account number correctly')</script>";
+    }else{
+      echo"<script>alert('Invalid account number')</script>";
       echo"<script>window.open('customerwelcome.php','_self')</script>";  
 
-}}
+}}}
 ?>

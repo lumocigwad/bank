@@ -1,4 +1,4 @@
-$(document).ready(function(){
+/*$(document).ready(function(){
     // Activate tooltip
     $('[data-toggle="tooltip"]').tooltip();
     
@@ -21,42 +21,26 @@ $(document).ready(function(){
         }
     });
 });
-
+*/
 $("#adm").click(function(){
-    $("#customer").hide();
-    $("#adminlogin-form").show();
-    $("#masterlogin-form").hide();
-    $("#hd").show();
-    $("#hdad").show();
-     $("#hdcus").hide();
-      $("#hdcsm").hide();
-       $("#hdall").hide();
+    $("#customer").hide('slow');
+    $("#adminlogin-form").show('slow');
+       $("#hd").show('slow');
+    $("#hdad").show('slow');
+     $("#hdcus").hide('slow');
+       $("#hdall").hide('slow');
        
        
 });
 $("#cus").click(function(){
-    $("#register-form").hide();
-    $("#customer").show();
-    $("#adminlogin-form").hide();
-     $("#masterlogin-form").hide();
-     $("#hd").show();
-     $("#hdad").hide();
-     $("#hdcus").show();
-      $("#hdcsm").hide();
-       $("#hdall").hide();
+    $("#register-form").hide('slow');
+    $("#customer").show('slow');
+    $("#adminlogin-form").hide('slow');
+      $("#hd").show('slow');
+     $("#hdad").hide('slow');
+     $("#hdcus").show('slow');
+      $("#hdall").hide('slow');
        
-       
-});
-$("#cusm").click(function(){
-    $("#register-form").hide();
-    $("#customer").hide();
-    $("#adminlogin-form").hide();
-    $("#masterlogin-form").show();
-    $("#hd").show();
-     $("#hdad").hide();
-     $("#hdcus").hide();
-      $("#hdcsm").show();
-       $("#hdall").hide();
        
 });
 
@@ -64,7 +48,6 @@ $(document).ready(function(){
     $("#hd").hide();
        $("#hdad").hide();
      $("#hdcus").hide();
-      $("#hdcsm").hide();
        $("#hdall").show();
        
        });
@@ -72,20 +55,17 @@ $("#selu").click(function(){
     $("#hd").hide();
     $("#hdad").hide();
      $("#hdcus").hide();
-      $("#hdcsm").hide();
-       $("#hdall").show();
+      $("#hdall").show();
        
 });
 $("#register-form-link").click(function(){
     $("#register-form").show();
     $("#customer").show();
     $("#adminlogin-form").hide();
-    $("#masterlogin-form").hide();
-    $("#hd").show();
+      $("#hd").show();
      $("#hdad").hide();
      $("#hdcus").show();
-      $("#hdcsm").hide();
-       $("#hdall").hide();
+      $("#hdall").hide();
        $("#login-form").hide();
        $("#register-form-link").hide();
 

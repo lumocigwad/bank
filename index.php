@@ -26,7 +26,7 @@
 <body>
 
   
-<!--navigation bar -->
+<!--navigation bar 
   <nav class="navbar navbar-inverse navbar-fixed-top " role="navigation">
     <div class="container-fluid">
     <div class="navbar-header">
@@ -49,7 +49,7 @@
       
     </div>
   </div>
-  </nav>
+  </nav>-->
 
   <!--end of navigation bar -->
 
@@ -64,7 +64,6 @@
 <div id="hdall"><h1 style="text-align: center" >KINDLY SELECT USER TO PROCEED</h1></div>
 <div id="hdad"><h1 style="text-align: center" >ADMIN</h1></div>
 <div id="hdcus"><h1 style="text-align: center" >CUSTOMER</h1></div>
-<div id="hdcsm"><h1 style="text-align: center" >CUSTOMER MASTER</h1></div>
 <!-- Select Basic -->
 
 <div class="form-group selectop">
@@ -75,8 +74,7 @@
       <option value="1" id="selu">Select User</option>
       <option value="2" id="adm">ADMIN</option>
       <option value="1" id="cus">CUSTOMER</option>
-      <option value="2" id="cusm">CUSTOMER MASTER</option>
-    </select>
+        </select>
   </div>
 </div>
 
@@ -204,40 +202,7 @@
           </div></div></div></div></div></div></div>
 
 
-<!--customer master login-->
 
-<div class="container form-frame" id="masterlogin-form">
-   <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-      <div class="panel panel-login">
-        <div class="panel-body">
-          <div class="row">
-            <div class="col-lg-12">
-              <form id="login-form" action="logincsm.php" method="post" role="form" style="display: block;">
-                <h2>CUSTOMER MASTER LOGIN</h2>
-                  <div class="form-group">
-                    <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
-                  </div>
-                  <div class="form-group">
-                    <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
-                  </div>
-                  <div class="form-group">
-                    <p class="forgot-password"><a href="">Forgot password?</a></p>
-                  </div>
-                  <div class="col-xs-6 form-group pull-left checkbox">
-                    <input id="checkbox1" type="checkbox" name="remember">
-                    <label for="checkbox1">Remember Me</label>   
-                  </div>
-                  <div class="col-xs-6 form-group pull-right">     
-                        <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
-                  </div>
-              </form>
-          </div></div></div></div></div></div></div>
-
-<footer class="navbar-inverse">
-  
-</footer>
-</div>
 <!-- javascript files -->
 <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>

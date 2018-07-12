@@ -28,7 +28,7 @@ $username = mysqli_real_escape_string($db, $_POST['username']);
   	$results = mysqli_query($db, $query);
 if(mysqli_num_rows($results)==1){
  $_SESSION['username'] = $username;
-header('location: admin.php');
+header('location: test.php');
 }
 else{
 	echo "account invalid";
